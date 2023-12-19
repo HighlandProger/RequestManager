@@ -1,0 +1,21 @@
+logging:
+  level:
+    root: info
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/request_manager_db?currentSchema=ncs_manager
+    username: manager
+    password: 44
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        format_sql: true
+        use_sql_comments: true
+      hbm2ddl:
+        auto: update
+
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: true

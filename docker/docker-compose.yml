@@ -1,0 +1,15 @@
+version: "3"
+services:
+  request-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      
+    image: request-manager
+    network_mode: host
+
+    environment:
+      - "JAVA_OPTS="
+      - spring.profiles.active=prod
+
+    restart: always
